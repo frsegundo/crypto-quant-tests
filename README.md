@@ -22,3 +22,7 @@ Basically, extract some volume data from FTX Perpetual Contracts.
 Why do I care about volume? Some strategies works better for markets with deep liquidity and lower spreads, some work in the opposite way, is always good to understand where you are stepping in.
 
 To get the volume data a more usual approach would be to read the [FTX API Documentation](https://docs.ftx.com/#overview) and see the methods that provide this kind of data. For those who want to work in crypto, having a basic understanding of these documentations is really useful, these exchanges provide a great amount of data for us to have fun with. Fortunately, in the fund i work for, we have a proprietary solution to get data (redis, a special kind of database), which save lots of time when doing this kind of research.
+
+The next line shows ftxData, wich is a dictionary with FTX derivatives data. You should be able to do the same reading the API Docs and get theses data using a request to the endpoint and method they provide.
+
+`ftxData = redDb.get('ftx_alt7:ftxmarkets')`
