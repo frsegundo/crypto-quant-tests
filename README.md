@@ -25,4 +25,9 @@ To get the volume data a more usual approach would be to read the [FTX API Docum
 
 The next line shows ftxData, wich is a dictionary with FTX derivatives data. You should be able to do the same reading the API Docs and get theses data using a request to the endpoint and method they provide.
 
-`ftxData = redDb.get('ftx_alt7:ftxmarkets')`
+```
+# access to data inside redis
+ftxData = redDb.get('ftx_alt7:ftxmarkets')
+ftxData = json.loads(ftxData)
+```
+
